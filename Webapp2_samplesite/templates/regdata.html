@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div id="midcontent_registration">
+   <div id="midcontent_content">
+      <h1>Registration Data</h1>
+      <br />
+      <ul>
+         {% for i in data.items %}
+         <li>{{ i.0 }} : {{ i.1 }}</li>
+         {% endfor %}
+      </ul>
+      <h1>Request Environment</h1>
+      <br />
+      <ul>
+         {% for i in env.items %}
+         <li>{{ i.0 }} : {{ i.1 }}</li>
+         {% endfor %}
+      </ul>
+      
+   </div>
+<div>
+{% endblock %}
+
+   

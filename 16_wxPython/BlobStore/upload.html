@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+    <h1>Upload to BlobStore</h1>
+
+    <!-- Always use multipart/form-data when posting files from a form. -->
+
+    <form action="{0}" enctype="multipart/form-data" method="post" style="width: 600px">
+        <fieldset>
+            <p>
+               <label>Pick a file to upload</label><br>
+               <input id="file" type="file" name="file" size="65">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

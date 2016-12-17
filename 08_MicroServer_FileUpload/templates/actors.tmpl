@@ -1,0 +1,25 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "actors" %}
+
+{% block title %}The Actors{% endblock %}
+
+{% block content %}
+<h1>Actors</h1>
+<table class="movies">
+    <thead>
+        <tr>
+           <th>First Name</th>
+           <th>Last Name</th>
+        </tr>
+    </thead>
+  <tbody>
+        {% for info in actors %}
+            <tr>
+              <td>{{ info[0] }}</td>
+              <td>{{ info[1] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

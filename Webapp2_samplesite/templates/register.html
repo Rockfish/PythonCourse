@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$().ready(function() {
+	// validate signup form on keyup and submit
+	$("#signupForm").validate({
+		rules: {
+			firstname: "required",
+			lastname: "required",
+			regkey: {
+				required: true,
+				minlength: 32
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			serialnumber: {
+				required: true,
+				digits: true,
+				minlength: 10,
+				maxlength: 10				
+			},
+			agree: "required"
+		},
+		messages: {
+			firstname: "Please enter your firstname",
+			lastname: "Please enter your lastname",
+			regkey: {
+				required: "Please enter a registration key",
+				minlength: "The registration key must be 32 characters long"
+			},
+			serialnumber: {
+				required: "Please enter the serial number",				
+				minlength: "The serial number must be 10 digits",
+				maxlength: "The serial number must be 10 digits"
+			},
+			email: "Please enter a valid email address",
+			agree: "Please accept the agreement"
+		}
+	});
+});
+</script>
+
+<style type="text/css">
+#signupForm { width: 670px; }
+#signupForm label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="midcontent_registration">
+    <div id="midcontent_content">
+       <h1>Registration</h1>
+       <br />
+      <form class="wufoo topLabel page1" id="signupForm" method="post" action="">
+      	<fieldset>
+      		<p>
+      			<label class="desc" for="firstname">First Name <span class=hilite>*</span></label>
+    			<input id="firstname" name="firstname" class="field text large" maxlength="255" size=40 />
+      		</p>
+      		<p>
+      			<label class="desc" for="lastname">Last Name <span class=hilite>*</span></label>
+      			<input id="lastname" class="field text large" name="lastname" size=40 />
+      		</p>
+      		<p>
+      			<label class="desc" for="address">Address</label>
+				<input id="address1" class="field text large" name="address1" size=40 /><br />
+				<input id="address2" class="field text large" name="address2" size=40 />
+      		</p>
+      		<p>
+      			<label class="desc" for="city">City</label>
+      			<input id="city" class="field text large" name="city" size=40 />
+      		</p>
+      		<p>
+      			<label class="desc" for="state">State</label>
+      			<input id="state" class="field text large" name="state" size=40 />
+      		</p>      		
+      		<p>
+      			<label class="desc" for="zipcode">Zip Code</label>
+      			<input id="zipcode" class="field text large" name="zipcode" size=40 />
+      		</p>      		
+      		<p>
+      			<label class="desc" for="country">Country</label>
+      			<input id="country" class="field text large" name="country" size=40 />
+      		</p>      		
+      		<p>
+      			<label class="desc" for="email">Email <span class=hilite>*</span></label>
+      			<input id="email" class="field text large" name="email" size=40 />
+      		</p>
+      		<p>
+      			<label class="desc" for="serialnumber">Device Serial Number <span class=hilite>*</span></label>
+      			<input id="serialnumber" class="field text large" name="serialnumber" size=40 />
+      		</p>
+      		<p>
+      		   <label class="msg" for="agree">I accept the <a href="/license-agreement">license agreement</a> <span class=hilite>*</span></label>
+      			<input type="checkbox" class="checkbox" id="agree" name="agree" />
+      		</p>
+      		<p>
+      			<input class="btTxt submit" type="submit" value="Submit"/>
+      		</p>
+      	</fieldset>
+      	<p><em>{{ message }}</em></p>
+      </form>
+      <br />
+      <p><span class=hilite>*</span> <em>required field</em></p>
+   </div>
+   </div>
+{% endblock %}

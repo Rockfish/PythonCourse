@@ -1,0 +1,107 @@
+=================
+Sphinx Cheatsheet
+=================
+
+Table of Contents
+=================
+
+	.. toctree::
+	   :maxdepth: 2
+
+	   intro
+	   tutorial
+
+Outlines
+========
+
+    * This is a bulleted list.
+    * It has two items, the second
+      item uses two lines.
+
+    1. This is a numbered list.
+    2. It has two items too.
+
+    #. This is a numbered list.
+    #. It has two items too.
+
+
+Nested Outlines
+===============
+
+Nested lists are possible, but be aware that they must be
+separated from the parent list items by blank lines:
+
+    * this is
+    * a list
+
+      * with a nested list
+      * and some subitems
+
+    * and here the parent list continues
+
+
+Images and Figures
+===================
+
+	.. image:: picture.jpeg
+	   :height: 100px
+	   :width: 200 px
+	   :scale: 50 %
+	   :alt: alternate text
+	   :align: right
+
+
+    .. figure:: picture.png
+       :scale: 50 %
+       :alt: map to buried treasure
+
+       This is the caption of the figure (a simple paragraph).
+
+       The legend consists of all elements after the caption.  In this
+       case, the legend consists of this paragraph and the following
+       table:
+
+       +-----------------------+-----------------------+
+       | Symbol                | Meaning               |
+       +=======================+=======================+
+       | .. image:: tent.png   | Campground            |
+       +-----------------------+-----------------------+
+       | .. image:: waves.png  | Lake                  |
+       +-----------------------+-----------------------+
+       | .. image:: peak.png   | Mountain              |
+       +-----------------------+-----------------------+
+
+Code Blocks
+===========
+
+	.. code-block:: c
+
+External Links
+==============
+
+	`Sphinx <http://http://sphinx.pocoo.org/>`_
+
+Internal Links
+==============
+
+Downloads
+=========
+
+	:download:`LPC2378STK_LCD_Demo.zip <Sources/LPC2378STK_LCD_Demo.zip>`
+
+References
+==========
+In the file to be reference add a label to the first line:
+
+	.. _mylabel:
+
+To make the reference:
+
+	:ref:`mylabel`
+
+Notes and Warnings
+==================
+
+    .. note::
+
+    .. warning::

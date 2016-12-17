@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$().ready(function() {
+	// validate signup form on keyup and submit
+	$("#signupForm").validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			regkey: {
+				required: true,
+				minlength: 32,
+				maxlength: 32
+			}
+		},
+		messages: {
+			email: "Please enter a valid email address",
+			regkey: {
+				required: "Please enter a registration key",
+				minlength: "The registration key is 32 characters long",
+				maxlength: "The registration key is 32 characters long"
+			}
+		}
+	});
+});
+</script>
+
+<style type="text/css">
+#signupForm { width: 670px; }
+#signupForm label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="midcontent_registration">
+    <div id="midcontent_content">
+       <div id="header" class="info">
+          <h1>Login for Software Updates</h1>
+      </div>
+      <br />
+      <br />
+      <form class="wufoo topLabel page1" id="signupForm" method="post" action="">
+      	<fieldset>
+      		<p>
+      			<label class="desc" for="email">Email</label>
+      			<input id="email" class="field text large" name="email" size=40/>
+      		</p>
+      		<p>
+      			<label class="desc" for="regkey">Registration Key</label>
+      			<input id="regkey" class="field text large" name="regkey" size=40 />
+      		</p>
+      		<p>
+      			<input class="btTxt submit" type="submit" value="Submit"/>
+      		</p>
+      	</fieldset>
+      	<p><em>{{ message }}</em></p>
+      </form>
+      <br />
+      <p><span class=hilite>*</span> <em>required field</em></p>
+      <br />
+      <br />
+      <p>If you do not have a registration key please <a href="/registration">register</a>.</p>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,198 @@
+
+#midcontent_registration
+{
+	width:1000px;
+	height:635px;
+	margin:0;
+	padding:0;
+	background-color:#fff;
+	float:left;
+	background:url(/images/regdownloads.jpg) no-repeat;
+	position:relative;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+
+#midcontent_registration h1
+{
+    color:#0078BF;
+}
+
+#midcontent_registration h2
+{
+	margin-bottom: 10px;
+}
+
+#midcontent_registration a
+{
+    font-size:16px;
+    color:#0000F0;
+}
+
+#midcontent_registration a:hover
+{
+    font-size:16px;
+    color:#0000F0;
+    text-decoration:underline;
+}
+
+#midcontent_content
+{
+	width:569px;
+	height:300px;
+	position:absolute;
+	left:357px;
+	top:27px;
+	line-height:22px;
+}
+
+#midcontent_confirm
+{
+	width:500px;
+	height:600px;
+	position:absolute;
+	left:357px;
+	top:27px;
+	line-height:22px;
+}
+
+#midcontent_confirm p
+{
+    margin-bottom:15px;
+}
+
+#midcontent_content em
+{
+    font-size:14px;
+}
+
+#midcontent_registration form
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#231F20;
+}
+
+#midcontent_registration form input
+	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	}
+
+#downloads
+{
+    width: 569px;
+    height: 300px;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #231f20;
+    position: absolute;
+    left: 357px;
+    top: 55px;
+    line-height: 22px;
+}
+
+#downloads ul { 
+	list-style: none;
+	margin: 0;
+	margin-left: 10px;
+}
+
+#downloads li { 
+	/*float: left;
+	position: relative;*/
+}
+
+#downloads table {
+    width: 100%
+}
+
+.hilite {
+    color:#f00000;
+}
+
+fieldset {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+label.desc {
+    font-size: 95%;
+    font-weight: bold;
+    color: #222;
+    line-height: 150%;
+    margin: 0;
+    padding: 0 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+
+label.msg {
+    font-size: 95%;
+    color: #222;
+    line-height: 150%;
+    margin: 0;
+    padding: 0 0 3px 0;
+    border: none;
+    white-space: normal;
+    width: 100%;
+}
+
+
+label.choice {
+    display: block;
+    font-size: 100%;
+    line-height: 150%;
+    margin: -17px 0 0 23px;
+    padding: 0 0 5px 0;
+    color: #222;
+    width: 88%;
+}
+
+input.text, input.search, input.file, textarea.textarea, select.select {
+    font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+    font-size: 100%;
+    color: #333;
+    margin: 0;
+    padding: 2px 0;
+}
+
+input.text, input.search, textarea.textarea {
+    border-top: 1px solid #7c7c7c;
+    border-left: 1px solid #c3c3c3;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #ddd;
+    background: #fff url(/images/fieldbg.gif) repeat-x top;
+}
+
+input.checkbox, input.radio {
+    margin: 4px 0 0 0;
+    padding: 0;
+    width: 13px;
+    height: 13px;
+}
+
+input.btTxt
+{
+    margin-top: 10px;
+    padding-top: 10pt;
+    padding-right: 7px;
+    padding-bottom: 0pt;
+    padding-left: 7px;
+    width: auto;
+}
+
+form li.buttons input
+{
+    font-size: 100%;
+    margin-right: 5px;
+}
+
+.safari input.btTxt
+{
+    font-size: 120%;
+}

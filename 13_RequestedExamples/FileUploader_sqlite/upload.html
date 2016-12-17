@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Uploader</title>
+</head>
+<body>
+	 <section class="content">
+	    <div class="page_no_menu">
+
+		<h1>Upload</h1>
+
+		<!-- Always use multipart/form-data when posting files from a form. -->
+
+		<form action="upload" enctype="multipart/form-data" method="post">
+		    <fieldset>
+		        <p>
+		           <label>Pick a file to upload</label>
+		           <input id="filepath" type="file" name="datafile" size="65">
+		        </p>
+		    </fieldset>
+		    <input type="submit" value="Submit">
+		</form>
+
+	    </div>
+	 </section>
+</body>
+</html>

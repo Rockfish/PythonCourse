@@ -1,0 +1,17 @@
+
+The MicroServer requires Python 3 and both the Jinja2 and WebOb packages.
+
+To install them run the following commands on the command line:
+
+
+    pip install jinja2
+
+    pip install webob
+
+
+Once they are installed you are good to go!
+
+Start by running my_webapp.py
+
+It will server pages at http://localhost:8000/
+

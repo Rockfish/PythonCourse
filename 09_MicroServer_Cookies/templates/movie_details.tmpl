@@ -1,0 +1,11 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "movies" %}
+
+{% block title %}Movie{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<img src="{{ poster }}" />
+<p style="width: 350px; font-size: 12pt;">{{ plot }}</p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+   <div id="midcontent_registration">
+      <div id="midcontent_content">
+         <h1>Software Downloads</h1>
+         <br />
+         <br />
+         <h2>Mac</h2>
+         <p><a href="/downloads/{{ Music.mac.name }}">{{ Music.mac.name }}</a></p>
+         <p>Music downloads.</p>
+         <br />
+         <h2>Windows</h2>
+         <p><a href="/downloads/{{ Music.win.name }}">{{ Music.win.name }}</a></p>
+         <p>More music.</p>
+        <br />
+        <h2>Firmware</h2>
+        <p><a href="/downloads/{{ Video.name }}">{{ Video.name }}</a></p>
+        <p>Video.</p>
+      </div>
+   </div>
+{% endblock %}

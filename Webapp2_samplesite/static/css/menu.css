@@ -1,0 +1,93 @@
+html, body, div, span, ol, ul, li{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+.clear{clear:both;}
+
+#menu { /* the menu container */
+	background: #939598;
+	width: 645px;
+	font-size: 13px;
+	float:right;
+	top:0px;
+}
+
+#menu ul { /* menu ul style */
+	list-style: none;
+	margin: 0;
+}
+
+#menu li { /* horizontal menu */
+	float: left;
+	position: relative;
+}
+
+#menu a { /* the link style of menu */
+	color: #fff;
+	display: block;
+	line-height: 38px;
+	padding: 0 7px;
+	text-decoration: none;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:85px;
+	text-align:center;
+}
+
+
+
+ /* The sub menu is hidden by default and its position is places right under the parent menu*/
+#menu ul ul {
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	float: left;
+	width: 85px;
+	z-index: 99999;
+}
+
+/* The sub menu list element is given a minimum width */
+#menu ul ul li {
+	min-width: 85px;
+}
+
+/* the third level menu (sub sub menu) is placed to the left side of its parent*/
+#menu ul ul ul {
+	left: 100%;
+	top: 0;
+	border-left:1px solid white;
+	}
+
+#menu ul ul a {
+	background: #939598;
+	line-height: 1em;
+	padding: 10px;
+	height: auto;
+
+}
+
+#menu li:hover > a,
+#menu ul ul :hover > a {
+	color: #0077c0;
+}
+#menu ul li:hover > ul {
+	display: block;
+}
+
+
+/* When the mouse is over a list (li) element with unordered-list (ul) element inside then show it. The position when its shown is defined in the previous block of CSS*/
+#menu ul li:hover > ul {
+	display: block;
+}
+
+/* Styles the anchor (a) tag when mouse over */
+#menu li:hover > a,
+#menu ul ul :hover > a {
+
+	color: #0077c0;
+}

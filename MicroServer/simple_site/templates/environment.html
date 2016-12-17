@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Environment{% endblock %}
+
+{% block content %}
+	<h1>Environ</h1>
+	<table id="parts">
+		{% for p in parts %}
+			<tr>
+			  <td>{{ p[0] }}</td>
+			  <td>{{ p[1] }}
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

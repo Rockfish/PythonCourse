@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Movies{% endblock %}
+
+{% block top_navigation %}
+      <ul>
+          <li class="selected"><a href="index">Home</a>
+          </li><li><a href="movies">Movies</a>
+          </li><li><a href="actors">Actors</a>
+          </li><li><a href="addmovie">Add Movie</a></li>
+      </ul>
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Movies</h1>
+<img src="/img/Fox_movietone.jpg" />
+<p>
+This is the movie database project website.
+It builds a small database of your favorite movies.
+</p>
+{% endblock %}

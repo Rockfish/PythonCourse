@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    {% block head %}{% endblock %}
+</head>
+<body>
+<body>
+    <header id="Logoheader" class="header">
+        <div class="container">
+           <div class="banner">
+               <a href="index.html"><img src="img/salmon_native.jpg" alt="Class" style="height:100px"></a>
+               <span class="title">Movie Database</span>
+           </div>
+           <nav class="menu">
+               {% block top_navigation %}{% endblock %}
+           </nav>
+        </div>
+        <div class="bluespacer">ss</div>
+    </header>
+     <section class="content">
+        <div class="page_no_menu">
+            {% block content %}{% endblock %}
+        </div>
+     </section>
+</body>
+</html>

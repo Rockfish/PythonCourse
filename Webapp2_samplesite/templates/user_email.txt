@@ -1,0 +1,10 @@
+Thank you for registering.
+
+Please go to http://updates.Company.com/login to login with 
+your email address and registration key. You can then
+download the latest software versions.
+
+Your registration key:  {{ regkey }}
+
+Thank you,
+Company Technologies

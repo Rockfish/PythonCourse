@@ -1,0 +1,29 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "movies" %}
+
+{% block title %}The Movies{% endblock %}
+
+{% block content %}
+<h1>Movies</h1>
+<table class="movies">
+    <thead>
+		<tr>
+		   <th>Title</th>
+		   <th>Year</th>
+		   <th>Plot</th>
+		   <th>Poster</th>
+		</tr>
+	</thead>
+  <tbody>
+		{% for title, year, plot, poster in movies %}
+		    <tr>
+		      <td><a href="/details?title={{ title }}">{{ title }}</a></td>
+		      <td>{{ year }}</td>
+		      <td>{{ plot }}</td>
+		      <td><a href="{{ poster }}">Link</a></td>
+		    </tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

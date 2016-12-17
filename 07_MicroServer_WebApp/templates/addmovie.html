@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Add a Movie{% endblock %}
+
+{% block top_navigation %}
+      <ul>
+          <li ><a href="index">Home</a>
+          </li><li><a href="movies">Movies</a>
+          </li><li><a href="actors">Actors</a>
+          </li><li class="selected"><a href="addmovie">Add Movie</a></li>
+      </ul>
+{% endblock %}
+
+{% block content %}
+<h1>Add a Movie</h1>
+<form class="addMovie" id="addMovieForm" method="post" action="addmovie">
+  <fieldset>
+      <p>
+          <label for="movietitle">Movie Title</label>
+          <input id="movietitle" name="movietitle" class="field text large"size=40 />
+      </p>
+  </fieldset>
+  <input type="submit" />
+</form>
+{% endblock %}
+

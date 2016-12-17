@@ -1,0 +1,14 @@
+New user registration information:
+
+First Name:       {{ firstname|escape }}
+Last Name:        {{ lastname|escape }}
+Address:          {{ address1|escape }}
+                  {{ address2|escape }}
+City:             {{ city|escape }}
+Zipcode:          {{ zipcode|escape }}
+Country:          {{ country|escape }}
+Email:            {{ email|escape }}
+Serial Number:    {{ serialnumber|escape }}
+Registration Key: {{ regkey|escape }}
+
+Sent from http://updates.company.com

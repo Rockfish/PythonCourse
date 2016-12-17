@@ -1,0 +1,332 @@
+/**
+ * Sphinx stylesheet -- default theme
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@import url("basic.css");
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;*/
+    font-family: helvetica, 'bitstream vera sans', sans-serif;
+    font-size: 90%;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+div.document {
+    background-color:  #BED0FF;
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 230px;
+    background-color: #fff;
+}
+
+/* -- footer ----------------------------------------------------------- */
+
+div.footer {
+    color: #FFF;
+    width: 100%;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 85%;
+    background-color: darkblue;
+}
+
+div.footer a {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* -- related ----------------------------------------------------------- */
+
+div.related {
+    background-color: darkblue;
+    line-height: 30px;
+    /*color: #FFAA2D;*/
+    color: #FFF;
+}
+
+div.related a {
+    /* color: #590915; */
+    color: #FFF;
+}
+
+/* -- side bar ----------------------------------------------------------- */
+
+div.sphinxsidebar {
+    margin-top: 20px;
+}
+
+div.sphinxsidebar h3 {
+    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h3 a {
+    color: #333;
+}
+
+div.sphinxsidebar h4 {
+    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
+    color: #333;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+div.sphinxsidebar p {
+    color: #333;
+}
+
+div.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px;
+    padding: 0;
+    color: #333;
+}
+
+div.sphinxsidebar a {
+    color: darkblue;
+}
+
+div.sphinxsidebar a:hover {
+    color: blue;
+    background-color: lightblue;
+    text-decoration: none;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #0418A6;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+a {
+    /* color: #0418A6; dark blue */
+    /* color: #590915;   dark red */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div.body {
+    background-color: #fff;
+    color: #000000;
+    padding: 20px 80px 40px 40px;
+    border-left: 1px solid #aaa;
+    width: 40em;
+    min-height: 800px;
+}
+
+div.body p, div.body dd, div.body li {
+    text-align: left;
+    line-height: 130%;
+}
+
+div.line-block {
+    line-height: 130%;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: arial, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
+    /*background-color: #fff;*/
+    font-weight: normal;
+    margin: 20px 0px 10px -10px;
+    padding: 3px 0 3px 0px;
+}
+
+div.body h1 {
+    margin-top: 0;
+    font-size: 200%;
+    color: #12347A;
+    border-bottom: 1px solid #ccc;
+}
+
+div.body div.section:first-child h1 {
+    margin-top: 0;
+}
+
+div.body h2 {
+    font-family: trebuchet ms, helvetica, verdana, sans-serif;
+    font-size: 140%;
+    /*text-decoration:underline;*/
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+div.body h3 {
+    font-family: helvetica, verdana, sans-serif;
+    font-size: 120%;
+}
+
+div.body h4 {
+    font-size: 120%;
+}
+
+div.body h5 {
+    font-size: 110%;
+}
+
+div.body h6 {
+    font-size: 100%;
+}
+
+a.headerlink {
+    color: #c60f0f;
+    font-size: 0.8em;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    background-color: #c60f0f;
+    color: white;
+}
+
+div.body p, div.body dd, div.body li {
+    text-align: left;
+    line-height: 130%;
+}
+
+div.admonition p.admonition-title + p {
+    display: inline;
+}
+
+div.admonition p {
+    margin-bottom: 5px;
+}
+
+div.admonition pre {
+    margin-bottom: 5px;
+}
+
+div.admonition ul, div.admonition ol {
+    margin-bottom: 5px;
+}
+
+div.note {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+div.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+div.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+pre {
+	font-family: "Lucida Console", Monaco, "Courier New", Courier, monospace;
+	font-size: 80%;
+    line-height: 120%;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: #fff;
+    /*color: #333333;*/
+}
+
+tt {
+    background-color: #ecf0f3;
+    padding: 0 1px 0 1px;
+    /* font-size: 0.95em; */
+}
+
+.warning tt {
+    background: #efc2c2;
+}
+
+.note tt {
+    background: #d6d6d6;
+}
+
+/* -- tables ---------------------------------------------------------------- */
+
+table.docutils {
+    border: 0;
+    border-collapse: collapse;
+    background-color: #F5F5FA;
+}
+
+table.docutils td,
+table.docutils th {
+    padding: 1px 8px 1px 5px;
+    /*
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #aaa;
+    */
+    border: 1px solid #aaa;
+}
+
+table.field-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table.field-list td,
+table.field-list th {
+    border: 0 !important;
+    background-color: #fff;
+}
+
+table.footnote td, table.footnote th {
+    border: 0 !important;
+}
+
+th {
+    text-align: left;
+    padding-right: 5px;
+}
+
+table.citation {
+    border-left: solid 1px gray;
+    margin-left: 1px;
+}
+
+table.citation td {
+    border-bottom: none;
+}

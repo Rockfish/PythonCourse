@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}The Actors{% endblock %}
+
+{% block top_navigation %}
+      <ul>
+          <li ><a href="index">Home</a>
+          </li><li><a href="movies">Movies</a>
+          </li><li><a href="actors">Actors</a>
+          </li><li class="selected"><a href="addmovie">Add Movie</a></li>
+      </ul>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ message }}</h1>
+    <a href="/addmovie">Add another movie</a>
+{% endblock %}
+

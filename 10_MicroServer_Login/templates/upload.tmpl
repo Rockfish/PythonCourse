@@ -1,0 +1,50 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "upload" %}
+
+{% block title %}The Movies{% endblock %}
+
+{% block content %}
+{% if logged_in_user is none %}
+
+    <h1>Upload</h1>
+
+    <p>Sorry, you must be logged in.</p>
+    <p><a href="/login">Login</a></p>
+
+{% else %}
+
+    <h1>Upload</h1>
+
+    <!-- Always use multipart/form-data when posting files from a form. -->
+
+    <form action="upload" enctype="multipart/form-data" method="post">
+        <fieldset>
+            <p>
+              <label>Title</label>
+              <input id="title" type="text" name="title" size="65">
+            </p>
+            <p>
+               <label>Pick a file to upload</label>
+               <input id="filepath" type="file" name="datafile" size="65">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script type="text/javascript">
+
+        // Binds a function to the onchange event of the filepath input field.
+        // The function uses the file path to set the title of the uploaded file.
+        $("#filepath").on("change", function( event ) {
+              var data = $("#filepath").val();
+              var start = data.lastIndexOf("\\");
+              var end = data.lastIndexOf(".");
+              var text = data.substring(start + 1, end);
+              $("#title").val(text);
+        });
+
+    </script>
+
+{% endif %}
+{% endblock %}

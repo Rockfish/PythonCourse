@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}The Movies{% endblock %}
+
+{% block top_navigation %}
+      <ul>
+          <li ><a href="index">Home</a>
+          </li><li class="selected"><a href="movies">Movies</a>
+          </li><li><a href="actors">Actors</a>
+          </li><li><a href="addmovie">Add Movie</a></li>
+      </ul>
+{% endblock %}
+
+{% block content %}
+<h1>Movies</h1>
+<table class="movies">
+    <thead>
+		<tr>
+		   <th>Title</th>
+		   <th>Year</th>
+		   <th>Plot</th>
+		</tr>
+	</thead>
+  <tbody>
+		{% for title, year, plot in movies %}
+		    <tr>
+		      <td><a href="/details?title={{ title }}">{{ title }}</a></td>
+		      <td>{{ year }}</td>
+		      <td>{{ plot }}</td>
+		    </tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

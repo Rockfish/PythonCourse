@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<body>
+		<h1 style="font-family: Verdana; font-size: 14.0px; ">New user registration information:</h1>
+		<table>
+			<tr><td>First Name:</td><td>{{ firstname|escape }}</td></tr>
+			<tr><td>Last Name:</td><td>{{ lastname|escape }}</td></tr>
+			<tr><td>Address:</td><td>{{ address1|escape }}</td></tr>
+			<tr><td> </td><td>{{ address2|escape }}</td></tr>
+			<tr><td>City:</td><td>{{ city|escape }}</td></tr>
+			<tr><td>Zipcode:</td><td>{{ zipcode|escape }}</td></tr>
+			<tr><td>Country:</td><td>{{ country|escape }}</td></tr>
+			<tr><td>Email:</td><td>{{ email|escape }}</td></tr>
+			<tr><td>Serial Number:</td><td>{{ serialnumber|escape }}</td></tr>
+			<tr><td>Registration Key:</td><td>{{ regkey|escape }}</td></tr>
+		</table>
+		<p>Sent from http://updates.company.com</p>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Movie{% endblock %}
+
+{% block top_navigation %}
+      <ul>
+          <li ><a href="index">Home</a>
+          </li><li><a href="movies">Movies</a>
+          </li><li><a href="actors">Actors</a>
+          </li><li><a href="addmovie">Add Movie</a></li>
+      </ul>
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<img src="{{ poster }}" />
+<p style="width: 350px; font-size: 12pt;">{{ plot }}</p>
+{% endblock %}

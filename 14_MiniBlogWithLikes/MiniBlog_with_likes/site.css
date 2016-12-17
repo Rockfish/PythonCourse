@@ -1,0 +1,61 @@
+
+table.messages {
+	width: 500px;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+table.messages h2 {
+	margin: 0;
+}
+
+table.messages tr td {
+	/* border: 1px solid black; */
+}
+
+.title {
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.date {
+    font-size: 10pt;
+}
+
+.likesmessage {
+	font-style: italic;
+}
+
+div.likebutton {
+	width: 50px;
+	float: right;
+	text-align: center;
+	background-color: lightblue;
+	border: 1px solid darkblue;
+}
+
+div.likebutton:hover {
+    width: 50px;
+    float: right;
+    text-align: center;
+    background-color: yellow;
+    border: 1px solid darkblue;
+    cursor: pointer;
+}
+
+ fieldset {
+     min-width: 100px;
+     display: inline-block;
+ }
+
+ fieldset input {
+     float: right;
+     width: 400px;
+     margin-left: 10px;
+ }
+
+  fieldset textarea {
+     float: right;
+     width: 400px;
+     margin-left: 10px;
+ }

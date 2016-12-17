@@ -1,0 +1,10 @@
+{#
+    cp105/layout.html
+#}
+
+{% extends "basic/layout.html" %}
+
+
+{% if theme_collapsiblesidebar|tobool %}
+{% set script_files = script_files + ['_static/sidebar.js'] %}
+{% endif %}

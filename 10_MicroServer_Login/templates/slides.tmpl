@@ -1,0 +1,87 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "slides" %}
+
+{% block title %}Movies{% endblock %}
+
+{% block content %}
+
+	<h1>Slides</h1>
+
+	<table>
+		<tr>
+		   <td>
+		      <img id="previous" class="button" src="/img/go-previous.png" />
+		   </td>
+		   <td>
+		      <img id="picture" height=500 src="" />
+		   </td>
+		   <td>
+		      <img id="next" class="button" src="/img/go-next.png" />
+		   </td>
+		</tr>
+    </table>
+
+    <p id="loadtime">Load Time</p>
+
+    <script type="text/javascript">
+
+    // current slide number
+    slide_number = -1;
+
+    // Ajax call
+    // Posts data object to the server.
+    // When the server replies it runs the success function
+    // which updates the slide_number and img element with id 'picture'.
+    function change_slide(direction) {
+        $.ajax({
+            type: "POST",
+            url: "/slides",
+            data: {
+                action: direction,
+                number: slide_number
+            },
+            dataType: "json",
+            success: function (data) {
+            	slide_number = data.number;
+                $("#picture").attr("src", data.url);
+            },
+            failure: function () {
+                alert("Error");
+            },
+            cache: false
+        });
+    }
+
+    // Binds onclick function to the next arrow
+    $("#next").on("click", function( event ) {
+    	change_slide("next")
+    });
+
+    // Binds onclick function to the previous arrow
+    $("#previous").on("click", function( event ) {
+        change_slide("previous")
+    });
+
+    // Returns the date and time in US format
+    function get_date_time() {
+    	var currentdate = new Date();
+    	var datetime = (currentdate.getMonth()+1)  + "/"
+                       + currentdate.getDate() + "/"
+    	               + currentdate.getFullYear() + " @ "
+    	               + currentdate.getHours() + ":"
+    	               + currentdate.getMinutes() + ":"
+    	               + currentdate.getSeconds();
+        return datetime;
+    }
+
+    // Loads first picture
+    change_slide("next");
+
+    // Set the load time
+    $("#loadtime").html("Load time: " + get_date_time());
+
+    </script>
+
+
+{% endblock %}

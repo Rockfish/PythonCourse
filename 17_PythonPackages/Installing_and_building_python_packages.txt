@@ -1,0 +1,33 @@
+
+PIP
+===
+PIP is the recommended way of installing Python Packages.
+See https://pip.pypa.io/en/latest/installing.html
+
+Quick intall run:
+
+    https://bootstrap.pypa.io/get-pip.py
+
+
+Microsoft Visual C++ Compiler for Python 2.7 
+============================================
+
+Many Python packages need a C++ compiler during install. 
+To get the compiler and all the system headers you need
+install this package from Microsoft:
+
+    http://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+This package contains the compiler and set of system headers necessary for 
+producing binary wheels for Python packages. A binary wheel of a Python package 
+can then be installed on any Windows system without requiring access to a C compiler.
+
+The typical error message you will receive if you need this compiler package 
+is 'Unable to find vcvarsall.bat'
+
+This message appears because the Python package being installed contains the 
+source code for a native extension module (.pyd), but does not have a pre-built 
+copy of the module. The Python packages highlighted at pythonwheels.com have 
+already been updated by their developers to include pre-built binaries, 
+but many are still only available as source code.
+

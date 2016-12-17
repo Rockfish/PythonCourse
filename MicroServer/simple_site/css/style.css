@@ -1,0 +1,19 @@
+
+body {
+    background-color: #EEE;
+    margin: 20px;
+    font-size: 16pt;
+}
+
+#content {
+    margin: 20px;
+    /*border: 1px solid blue;*/
+}
+
+#parts li {
+    list-style-type: none;
+    line-height: 20px;
+}
+
+
+

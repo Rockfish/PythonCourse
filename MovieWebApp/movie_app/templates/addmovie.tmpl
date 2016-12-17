@@ -1,0 +1,19 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "addmovie" %}
+
+{% block title %}Add a Movie{% endblock %}
+
+{% block content %}
+<h1>Add a Movie</h1>
+<form class="addMovie" id="addMovieForm" method="post" action="addmovie">
+  <fieldset>
+      <p>
+          <label for="movietitle">Movie Title</label>
+          <input id="movietitle" name="movietitle" class="field text large"size=40 />
+      </p>
+  </fieldset>
+  <input type="submit" />
+</form>
+{% endblock %}
+

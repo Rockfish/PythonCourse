@@ -1,0 +1,52 @@
+{% set navigation_bar = [
+    ('/index', 'index', 'Index'),
+    ('/movies', 'movies', 'Movies'),
+    ('/actors', 'actors', 'Actors'),
+    ('/addmovie', 'addmovie', 'Add Movie'),
+    ('/upload', 'upload', 'Upload'),
+    ('/slides', 'slides', 'Slides'),
+    ('/posters', 'posters', 'Posters'),
+    ('/register', 'register', 'Register')
+] -%}
+{% set active_page = active_page|default('index') -%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="/js/jquery-2.1.1.js" type="text/javascript"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header id="Logoheader" class="header">
+        <div class="container">
+           <div class="banner">
+               <a href="index.html"><img src="img/salmon_native.jpg" alt="Class" style="height:100px"></a>
+               <span class="title">Movie Database</span>
+               {% if logged_in_user == None %}
+                    <span class="userid"><a href="/login">Log in</a></span>
+               {% else %}
+                    <span class="userid">{{ logged_in_user }} <a href="/logout">(Log out)</a></span>
+               {% endif %}
+           </div>
+           <nav class="menu">
+               <ul>
+                {% for href, id, caption in navigation_bar %}
+                  <li {% if id == active_page %} class="selected"{% endif %}>
+                    <a href="{{ href|e }}">{{ caption|e }}</a>
+                  </li>
+                {% endfor %}
+                </ul>
+           </nav>
+        </div>
+        <div class="bluespacer">ss</div>
+    </header>
+     <section class="content">
+        <div class="page_no_menu">
+            {% block content %}{% endblock %}
+        </div>
+     </section>
+</body>
+</html>

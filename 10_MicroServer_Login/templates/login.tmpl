@@ -1,0 +1,39 @@
+{% extends "base.tmpl" %}
+
+{% set active_page = "login" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+
+{% if loggedin == "yes" %}
+
+    <h2>Welcome back!</h2>
+    <h2>Your user id: {{ logged_in_user }}</h2>
+
+{% elif loggedin == "error" %}
+
+    <h2>Sorry there was an error: {{ error_message }}</h2>
+    <p>Please try again. <a href="/login">Login</a></p>
+
+{% else %}
+
+    <form action="login" method="post">
+        <fieldset>
+            <p>
+              <label>Enter your user id</label>
+              <input id="userid" type="text" name="userid" size="65">
+            </p>
+            <p>
+               <label>Password</label>
+               <input id="password" type="password" name="password" size="65">
+            </p>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endif %}
+
+
+{% endblock %}
